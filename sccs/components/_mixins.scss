@@ -15,3 +15,7 @@
         }
     }
 }
+
+@mixin transition-all {
+    transition: 0.5s;
+}
