@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -5,6 +7,8 @@ html {
 
 body {
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -30,10 +34,12 @@ a:active, a:hover {
 }
 
 img {
-    border-style: none;
-    vertical-align: middle;
     max-width: 100%;
     height: auto;
+    border-style: none;
+    display: inline-block;
+    vertical-align: middle;    
+    -ms-interpolation-mode: bicubic;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -51,6 +57,11 @@ ul, ol {
 input {
     box-shadow: none;
     border-radius: 0;
+    -webkit-appearance: none;
+}
+
+select {
+    appearance: none;
 }
 
 button, input, select, textarea {
@@ -65,9 +76,9 @@ button, input {
 button, [type="submit"] {
     -webkit-appearance: button;
     border: 0;
+    padding: 0;
     cursor: pointer;
     background-color: transparent;
-    padding: 0;
 }
 
 button::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
@@ -98,6 +109,10 @@ button, select {
     text-transform: none;
 }
 
+button:focus, select:focus{
+    outline: 0;
+}
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -114,4 +129,8 @@ td {
 
 .clear:after {
     clear: both;
+}
+
+.is-hidden {
+    display: none !important;
 }
